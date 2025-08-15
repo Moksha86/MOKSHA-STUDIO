@@ -1,304 +1,145 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MOKSHA STUDIO - Crafting Digital Legends for the Gaming Metaverse</title>
-    <meta name="description" content="MOKSHA STUDIO creates premium NFT items for top gaming worlds. From unique 3D models to collectible artifacts for RPG, Sandbox, and Voxel-art games.">
-    <meta name="keywords" content="NFT, gaming, metaverse, 3D models, RPG items, voxel art, digital collectibles">
-    <meta name="author" content="MOKSHA STUDIO">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mokshastudio.com/">
-    <meta property="og:title" content="MOKSHA STUDIO - Crafting Digital Legends">
-    <meta property="og:description" content="Premium NFT items for top gaming worlds">
-    <meta property="og:image" content="/placeholder.svg?height=630&width=1200">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://mokshastudio.com/">
-    <meta property="twitter:title" content="MOKSHA STUDIO - Crafting Digital Legends">
-    <meta property="twitter:description" content="Premium NFT items for top gaming worlds">
-    <meta property="twitter:image" content="/placeholder.svg?height=630&width=1200">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/placeholder.svg?height=32&width=32">
-    <link rel="apple-touch-icon" href="/placeholder.svg?height=180&width=180">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'sans': ['Geist', 'system-ui', 'sans-serif'],
-                        'body': ['Manrope', 'system-ui', 'sans-serif'],
-                    },
-                    colors: {
-                        background: 'oklch(0.12 0 0)',
-                        foreground: 'oklch(1 0 0)',
-                        card: 'oklch(0.16 0 0)',
-                        'card-foreground': 'oklch(0.75 0.02 240)',
-                        primary: 'oklch(0.45 0.25 285)',
-                        'primary-foreground': 'oklch(1 0 0)',
-                        secondary: 'oklch(0.75 0.15 180)',
-                        'secondary-foreground': 'oklch(0.12 0 0)',
-                        accent: 'oklch(0.75 0.15 180)',
-                        'accent-foreground': 'oklch(0.12 0 0)',
-                        muted: 'oklch(0.29 0 0)',
-                        'muted-foreground': 'oklch(0.75 0.02 240)',
-                        border: 'oklch(0.24 0 0)',
-                    },
-                    animation: {
-                        'neon-glow': 'neon-glow 2s ease-in-out infinite alternate',
-                        'float': 'float 3s ease-in-out infinite',
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <style>
-        @keyframes neon-glow {
-            0%, 100% { 
-                text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
-            }
-            50% { 
-                text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
-            }
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        .neon-glow {
-            animation: neon-glow 2s ease-in-out infinite alternate;
-        }
-        
-        .float-animation {
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, 
-                oklch(0.12 0 0) 0%, 
-                oklch(0.16 0 0) 50%, 
-                oklch(0.12 0 0) 100%);
-        }
-        
-        .cyberpunk-border {
-            border: 2px solid transparent;
-            background: linear-gradient(oklch(0.16 0 0), oklch(0.16 0 0)) padding-box,
-                        linear-gradient(45deg, oklch(0.45 0.25 285), oklch(0.75 0.15 180)) border-box;
-        }
-        
-        .geometric-bg {
-            background-image: 
-                radial-gradient(circle at 20% 80%, oklch(0.45 0.25 285 / 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, oklch(0.75 0.15 180 / 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, oklch(0.45 0.25 285 / 0.05) 0%, transparent 50%);
-        }
-        
-        .hover-glow:hover {
-            box-shadow: 0 0 20px oklch(0.45 0.25 285 / 0.5);
-            transform: translateY(-2px);
-            transition: all 0.3s ease;
-        }
-    </style>
+    <title>MOKSHA STUDIO - Premium NFT Gaming Assets</title>
+    <meta name="description" content="MOKSHA STUDIO creates unique NFT items for top gaming worlds. Specializing in weapons, armor, artifacts and collectibles for The Sandbox, Minecraft, and metaverses.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="globals.css">
 </head>
-
-<body class="bg-background text-foreground font-body antialiased">
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-border">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <img src="/placeholder.svg?height=40&width=120" alt="MOKSHA STUDIO" class="h-10">
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <img src="logo.png" alt="MOKSHA STUDIO" class="logo" loading="eager">
                 </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#about" class="text-muted-foreground hover:text-accent transition-colors duration-300">About</a>
-                        <a href="#projects" class="text-muted-foreground hover:text-accent transition-colors duration-300">Projects</a>
-                        <a href="#contact" class="text-muted-foreground hover:text-accent transition-colors duration-300">Contact</a>
-                    </div>
-                </div>
-                <div class="md:hidden">
-                    <button class="text-muted-foreground hover:text-accent">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#showcase" class="nav-link">Showcase</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center geometric-bg overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-background/80"></div>
-        
-        <!-- Floating geometric shapes -->
-        <div class="absolute top-20 left-10 w-20 h-20 border border-primary/30 rotate-45 float-animation"></div>
-        <div class="absolute bottom-20 right-10 w-16 h-16 border border-accent/30 rotate-12 float-animation" style="animation-delay: -1s;"></div>
-        <div class="absolute top-1/2 left-20 w-12 h-12 bg-primary/10 rotate-45 float-animation" style="animation-delay: -2s;"></div>
-        
-        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8" data-aos="fade-up">
-            <div class="mb-8">
-                <img src="/placeholder.svg?height=120&width=400" alt="MOKSHA STUDIO" class="mx-auto h-24 sm:h-32 neon-glow">
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <img src="hero-bg.jpg" alt="Cyberpunk Gaming World" class="hero-bg-image" loading="eager">
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-main">MOKSHA STUDIO</span>
+                    <span class="title-sub">Premium NFT Gaming Assets</span>
+                </h1>
+                <p class="hero-description">
+                    Creating unique digital assets for top gaming worlds. Weapons, armor, artifacts and collectibles that seamlessly integrate into The Sandbox, Minecraft, and popular metaverses.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#showcase" class="btn btn-primary">View Showcase</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
             </div>
-            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-sans font-bold mb-6 text-primary neon-glow">
-                MOKSHA STUDIO
-            </h1>
-            <p class="text-xl sm:text-2xl lg:text-3xl mb-8 text-accent font-sans font-medium">
-                Crafting Digital Legends for the Gaming Metaverse
-            </p>
-            <p class="text-lg sm:text-xl mb-12 text-muted-foreground max-w-2xl mx-auto font-body">
-                Premium NFT items and collectible artifacts for the world's top gaming experiences
-            </p>
-            <a href="#contact" class="inline-flex items-center px-8 py-4 bg-primary text-primary-foreground font-sans font-semibold text-lg rounded-lg hover-glow transition-all duration-300 uppercase tracking-wider">
-                <i class="fas fa-rocket mr-3"></i>
-                Contact Us
-            </a>
         </div>
     </section>
+
+    <!-- Geometric Separator -->
+    <div class="separator">
+        <img src="geometric-accent.png" alt="Geometric Accent" class="geometric-accent" loading="lazy">
+    </div>
 
     <!-- About Section -->
-    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div data-aos="fade-right">
-                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-sans font-bold mb-6 text-foreground">
-                        About <span class="text-primary neon-glow">MOKSHA STUDIO</span>
-                    </h2>
-                    <p class="text-lg text-muted-foreground mb-6 font-body leading-relaxed">
-                        MOKSHA STUDIO is a creative team that creates NFT items for top gaming worlds. 
-                        From unique 3D models to collectible artifacts, we bring digital legends to life 
-                        in the metaverse.
-                    </p>
-                    <p class="text-lg text-muted-foreground mb-8 font-body leading-relaxed">
-                        Our expertise spans across RPG realms, Sandbox environments, and Voxel-art universes, 
-                        crafting items that enhance gameplay and hold lasting value in the digital economy.
-                    </p>
-                    <div class="flex flex-wrap gap-4">
-                        <span class="px-4 py-2 bg-card text-accent border border-accent/30 rounded-lg font-sans font-medium">RPG Items</span>
-                        <span class="px-4 py-2 bg-card text-accent border border-accent/30 rounded-lg font-sans font-medium">Voxel Art</span>
-                        <span class="px-4 py-2 bg-card text-accent border border-accent/30 rounded-lg font-sans font-medium">3D Models</span>
-                        <span class="px-4 py-2 bg-card text-accent border border-accent/30 rounded-lg font-sans font-medium">Collectibles</span>
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About MOKSHA STUDIO</h2>
+                    <div class="about-description">
+                        <p>MOKSHA STUDIO is a creative studio that creates unique NFT items for top gaming worlds. We specialize in developing highly detailed weapons, armor, artifacts and rare collectibles that seamlessly integrate into gaming ecosystems of The Sandbox, Minecraft, RPG platforms and other popular metaverses.</p>
+                        
+                        <p>Our mission is to combine art, technology and gaming, creating digital assets that are not only visually impressive, but also have value in gaming economies. Each NFT from MOKSHA STUDIO is a thoughtful design, gameplay functionality and rarity confirmed by the blockchain.</p>
+                        
+                        <p>We work in premium quality standards, using advanced 3D tools, voxel art and author's styles. Our works represent the perfect fusion of creativity and technical excellence.</p>
                     </div>
                 </div>
-                <div data-aos="fade-left" class="relative">
-                    <div class="cyberpunk-border rounded-lg p-1">
-                        <img src="/placeholder.svg?height=500&width=600" alt="Voxel Art Render" class="w-full h-auto rounded-lg">
-                    </div>
-                    <div class="absolute -top-4 -right-4 w-24 h-24 border-2 border-accent/50 rounded-full flex items-center justify-center bg-background/80 backdrop-blur-sm">
-                        <i class="fas fa-cube text-2xl text-accent"></i>
-                    </div>
+                <div class="about-image">
+                    <img src="voxel-studio.png" alt="MOKSHA STUDIO Voxel Art" class="voxel-image" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 bg-card/30">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-sans font-bold mb-6 text-foreground">
-                    Our <span class="text-accent neon-glow">Projects</span>
-                </h2>
-                <p class="text-lg text-muted-foreground max-w-2xl mx-auto font-body">
-                    Explore our collection of premium NFT items crafted for the gaming metaverse
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project Card 1 -->
-                <div class="cyberpunk-border rounded-lg overflow-hidden hover-glow transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
-                    <img src="/placeholder.svg?height=300&width=400" alt="Cyberpunk Weapon" class="w-full h-48 object-cover">
-                    <div class="p-6 bg-card">
-                        <h3 class="text-xl font-sans font-semibold mb-3 text-foreground">Neon Blade Collection</h3>
-                        <p class="text-muted-foreground mb-4 font-body">Legendary weapons with cyberpunk aesthetics for RPG adventures</p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-accent font-sans font-medium">RPG • Weapons</span>
-                            <i class="fas fa-external-link-alt text-accent"></i>
+    <!-- Geometric Separator -->
+    <div class="separator">
+        <img src="geometric-accent.png" alt="Geometric Accent" class="geometric-accent" loading="lazy">
+    </div>
+
+    <!-- NFT Showcase Section -->
+    <section id="showcase" class="showcase">
+        <div class="container">
+            <h2 class="section-title">NFT Project Showcase</h2>
+            <div class="showcase-grid">
+                <div class="showcase-item">
+                    <div class="showcase-image">
+                        <img src="nft-weapon-1.jpg" alt="Premium Gaming Weapon NFT" loading="lazy">
+                        <div class="showcase-overlay">
+                            <h3 class="showcase-title">Premium Weapons</h3>
+                            <p class="showcase-desc">High-detail combat assets</p>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Project Card 2 -->
-                <div class="cyberpunk-border rounded-lg overflow-hidden hover-glow transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
-                    <img src="/placeholder.svg?height=300&width=400" alt="Voxel Armor" class="w-full h-48 object-cover">
-                    <div class="p-6 bg-card">
-                        <h3 class="text-xl font-sans font-semibold mb-3 text-foreground">Quantum Armor Set</h3>
-                        <p class="text-muted-foreground mb-4 font-body">Protective gear with quantum-enhanced properties for sandbox worlds</p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-accent font-sans font-medium">Sandbox • Armor</span>
-                            <i class="fas fa-external-link-alt text-accent"></i>
+                <div class="showcase-item">
+                    <div class="showcase-image">
+                        <img src="nft-armor-1.jpg" alt="Epic Gaming Armor NFT" loading="lazy">
+                        <div class="showcase-overlay">
+                            <h3 class="showcase-title">Epic Armor</h3>
+                            <p class="showcase-desc">Protective gear collections</p>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Project Card 3 -->
-                <div class="cyberpunk-border rounded-lg overflow-hidden hover-glow transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
-                    <img src="/placeholder.svg?height=300&width=400" alt="Mystical Artifacts" class="w-full h-48 object-cover">
-                    <div class="p-6 bg-card">
-                        <h3 class="text-xl font-sans font-semibold mb-3 text-foreground">Mystic Artifacts</h3>
-                        <p class="text-muted-foreground mb-4 font-body">Rare collectible items with mystical powers and unique properties</p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-accent font-sans font-medium">Collectibles • Magic</span>
-                            <i class="fas fa-external-link-alt text-accent"></i>
+                <div class="showcase-item">
+                    <div class="showcase-image">
+                        <img src="nft-artifact-1.jpg" alt="Rare Gaming Artifact NFT" loading="lazy">
+                        <div class="showcase-overlay">
+                            <h3 class="showcase-title">Rare Artifacts</h3>
+                            <p class="showcase-desc">Mystical gaming items</p>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Project Card 4 -->
-                <div class="cyberpunk-border rounded-lg overflow-hidden hover-glow transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
-                    <img src="/placeholder.svg?height=300&width=400" alt="Cyber Vehicles" class="w-full h-48 object-cover">
-                    <div class="p-6 bg-card">
-                        <h3 class="text-xl font-sans font-semibold mb-3 text-foreground">Cyber Vehicles</h3>
-                        <p class="text-muted-foreground mb-4 font-body">High-tech transportation for futuristic gaming environments</p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-accent font-sans font-medium">Vehicles • Tech</span>
-                            <i class="fas fa-external-link-alt text-accent"></i>
+                <div class="showcase-item">
+                    <div class="showcase-image">
+                        <img src="nft-vehicle-1.jpg" alt="Gaming Vehicle NFT" loading="lazy">
+                        <div class="showcase-overlay">
+                            <h3 class="showcase-title">Vehicles</h3>
+                            <p class="showcase-desc">Transportation assets</p>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Project Card 5 -->
-                <div class="cyberpunk-border rounded-lg overflow-hidden hover-glow transition-all duration-300" data-aos="fade-up" data-aos-delay="500">
-                    <img src="/placeholder.svg?height=300&width=400" alt="Voxel Architecture" class="w-full h-48 object-cover">
-                    <div class="p-6 bg-card">
-                        <h3 class="text-xl font-sans font-semibold mb-3 text-foreground">Neon Structures</h3>
-                        <p class="text-muted-foreground mb-4 font-body">Architectural marvels for building in voxel-based worlds</p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-accent font-sans font-medium">Voxel • Buildings</span>
-                            <i class="fas fa-external-link-alt text-accent"></i>
+                <div class="showcase-item">
+                    <div class="showcase-image">
+                        <img src="nft-pet-1.jpg" alt="Gaming Pet NFT" loading="lazy">
+                        <div class="showcase-overlay">
+                            <h3 class="showcase-title">Companions</h3>
+                            <p class="showcase-desc">Digital pet collections</p>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Project Card 6 -->
-                <div class="cyberpunk-border rounded-lg overflow-hidden hover-glow transition-all duration-300" data-aos="fade-up" data-aos-delay="600">
-                    <img src="/placeholder.svg?height=300&width=400" alt="Digital Companions" class="w-full h-48 object-cover">
-                    <div class="p-6 bg-card">
-                        <h3 class="text-xl font-sans font-semibold mb-3 text-foreground">Digital Companions</h3>
-                        <p class="text-muted-foreground mb-4 font-body">AI-powered companions with unique personalities and abilities</p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-accent font-sans font-medium">Companions • AI</span>
-                            <i class="fas fa-external-link-alt text-accent"></i>
+                <div class="showcase-item">
+                    <div class="showcase-image">
+                        <img src="nft-accessory-1.jpg" alt="Gaming Accessory NFT" loading="lazy">
+                        <div class="showcase-overlay">
+                            <h3 class="showcase-title">Accessories</h3>
+                            <p class="showcase-desc">Character enhancements</p>
                         </div>
                     </div>
                 </div>
@@ -307,80 +148,75 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto text-center">
-            <div data-aos="fade-up">
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-sans font-bold mb-6 text-foreground">
-                    Get In <span class="text-primary neon-glow">Touch</span>
-                </h2>
-                <p class="text-lg text-muted-foreground mb-12 font-body">
-                    Ready to bring your gaming vision to life? Let's create something legendary together.
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-8 mb-12">
-                <div class="cyberpunk-border rounded-lg p-8 bg-card hover-glow transition-all duration-300" data-aos="fade-right">
-                    <i class="fas fa-envelope text-3xl text-accent mb-4"></i>
-                    <h3 class="text-xl font-sans font-semibold mb-3 text-foreground">Email Us</h3>
-                    <a href="mailto:mokshastudio1@gmail.com" class="text-accent hover:text-primary transition-colors duration-300 font-body">
-                        mokshastudio1@gmail.com
-                    </a>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <a href="mailto:mokshastudionft@gmail.com" class="contact-link">mokshastudionft@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Location</h3>
+                        <p>Silicon Beach, Los Angeles, CA</p>
+                    </div>
                 </div>
-                
-                <div class="cyberpunk-border rounded-lg p-8 bg-card hover-glow transition-all duration-300" data-aos="fade-left">
-                    <i class="fas fa-map-marker-alt text-3xl text-accent mb-4"></i>
-                    <h3 class="text-xl font-sans font-semibold mb-3 text-foreground">Location</h3>
-                    <p class="text-muted-foreground font-body">
-                        2000 Avenue of the Stars<br>
-                        Los Angeles, CA 90067, USA
-                    </p>
+                <div class="contact-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://x.com/MOKSHA_STUDIO" target="_blank" rel="noopener" class="social-link">
+                            <span>Twitter</span>
+                        </a>
+                        <a href="https://discord.gg/U3Z3Huf5" target="_blank" rel="noopener" class="social-link">
+                            <span>Discord</span>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="flex justify-center space-x-6" data-aos="fade-up" data-aos-delay="200">
-                <a href="https://x.com/MOKSHA_STUDIO" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-card border border-accent/30 rounded-lg flex items-center justify-center text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover-glow">
-                    <i class="fab fa-twitter text-xl"></i>
-                </a>
-                <a href="https://discord.gg/U3Z3Huf5" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-card border border-accent/30 rounded-lg flex items-center justify-center text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover-glow">
-                    <i class="fab fa-discord text-xl"></i>
-                </a>
-                <a href="#" class="w-12 h-12 bg-card border border-accent/30 rounded-lg flex items-center justify-center text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover-glow">
-                    <i class="fab fa-instagram text-xl"></i>
-                </a>
-                <a href="#" class="w-12 h-12 bg-card border border-accent/30 rounded-lg flex items-center justify-center text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover-glow">
-                    <i class="fab fa-linkedin text-xl"></i>
-                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 px-4 sm:px-6 lg:px-8 border-t border-border">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <img src="/placeholder.svg?height=32&width=120" alt="MOKSHA STUDIO" class="h-8 mb-2">
-                    <p class="text-muted-foreground font-body">© 2025 MOKSHA STUDIO — All rights reserved.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="MOKSHA STUDIO" class="footer-logo" loading="lazy">
+                    <p class="footer-tagline">Premium NFT Gaming Assets</p>
                 </div>
-                <div class="flex space-x-6">
-                    <a href="#" class="text-muted-foreground hover:text-accent transition-colors duration-300 font-body">Privacy Policy</a>
-                    <a href="#" class="text-muted-foreground hover:text-accent transition-colors duration-300 font-body">Terms of Use</a>
+                <div class="footer-nav">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#showcase">Showcase</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
                 </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>mokshastudionft@gmail.com</p>
+                    <p>Silicon Beach, Los Angeles, CA</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MOKSHA STUDIO. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- AOS Animation Script -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true,
-            offset: 100
+        // Mobile Navigation Toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
         });
-        
-        // Smooth scrolling for navigation links
+
+        // Smooth Scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -393,17 +229,16 @@
                 }
             });
         });
-        
-        // Mobile menu toggle
-        const mobileMenuButton = document.querySelector('.md\\:hidden button');
-        const mobileMenu = document.querySelector('.md\\:block');
-        
-        if (mobileMenuButton) {
-            mobileMenuButton.addEventListener('click', function() {
-                // Add mobile menu functionality here if needed
-                console.log('Mobile menu clicked');
-            });
-        }
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
     </script>
 </body>
 </html>
