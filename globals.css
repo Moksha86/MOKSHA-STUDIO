@@ -1,0 +1,163 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Cyberpunk Color Scheme for MOKSHA STUDIO */
+  --background: oklch(0.12 0 0); /* #1F1F1F - Dark gray background */
+  --foreground: oklch(1 0 0); /* #FFFFFF - White text */
+  --card: oklch(0.16 0 0); /* #2A2A2A - Slightly lighter dark gray for cards */
+  --card-foreground: oklch(0.75 0.02 240); /* #B0C4DE - Light steel blue for card text */
+  --popover: oklch(0.16 0 0); /* #2A2A2A - For popovers */
+  --popover-foreground: oklch(1 0 0); /* #FFFFFF - For popover text */
+  --primary: oklch(0.45 0.25 285); /* #8A2BE2 - Blue-violet primary */
+  --primary-foreground: oklch(1 0 0); /* #FFFFFF - For button text */
+  --secondary: oklch(0.75 0.15 180); /* #40E0D0 - Turquoise secondary */
+  --secondary-foreground: oklch(0.12 0 0); /* #1F1F1F - For secondary button text */
+  --muted: oklch(0.29 0 0); /* #4B4B4B - For muted elements */
+  --muted-foreground: oklch(0.75 0.02 240); /* #B0C4DE - For muted text */
+  --accent: oklch(0.75 0.15 180); /* #40E0D0 - Turquoise accent */
+  --accent-foreground: oklch(0.12 0 0); /* #1F1F1F - For accent text */
+  --destructive: oklch(0.55 0.22 25); /* #FF4500 - For error messages */
+  --destructive-foreground: oklch(1 0 0); /* #FFFFFF - For destructive button text */
+  --border: oklch(0.24 0 0); /* #3D3D3D - For borders */
+  --input: oklch(0.16 0 0); /* #2A2A2A - For input fields */
+  --ring: oklch(0.45 0.25 285); /* #8A2BE2 - For focus rings */
+  --chart-1: oklch(0.45 0.25 285);
+  --chart-2: oklch(0.75 0.15 180);
+  --chart-3: oklch(0.75 0.02 240);
+  --chart-4: oklch(0.55 0.22 25);
+  --chart-5: oklch(0.65 0.18 320);
+  --radius: 0.5rem;
+  --sidebar: oklch(0.12 0 0); /* #1F1F1F - For sidebars */
+  --sidebar-foreground: oklch(0.75 0.02 240); /* #B0C4DE - For sidebar text */
+  --sidebar-primary: oklch(0.45 0.25 285); /* #8A2BE2 - For sidebar primary actions */
+  --sidebar-primary-foreground: oklch(1 0 0); /* #FFFFFF - For sidebar primary text */
+  --sidebar-accent: oklch(0.75 0.15 180); /* #40E0D0 - For sidebar accents */
+  --sidebar-accent-foreground: oklch(0.12 0 0); /* #1F1F1F - For sidebar accent text */
+  --sidebar-border: oklch(0.24 0 0); /* #3D3D3D - For sidebar borders */
+  --sidebar-ring: oklch(0.45 0.25 285); /* #8A2BE2 - For sidebar focus rings */
+}
+
+.dark {
+  /* Dark mode uses the same cyberpunk scheme */
+  --background: oklch(0.12 0 0);
+  --foreground: oklch(1 0 0);
+  --card: oklch(0.16 0 0);
+  --card-foreground: oklch(0.75 0.02 240);
+  --popover: oklch(0.16 0 0);
+  --popover-foreground: oklch(1 0 0);
+  --primary: oklch(0.45 0.25 285);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.75 0.15 180);
+  --secondary-foreground: oklch(0.12 0 0);
+  --muted: oklch(0.29 0 0);
+  --muted-foreground: oklch(0.75 0.02 240);
+  --accent: oklch(0.75 0.15 180);
+  --accent-foreground: oklch(0.12 0 0);
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.24 0 0);
+  --input: oklch(0.16 0 0);
+  --ring: oklch(0.45 0.25 285);
+  --chart-1: oklch(0.45 0.25 285);
+  --chart-2: oklch(0.75 0.15 180);
+  --chart-3: oklch(0.75 0.02 240);
+  --chart-4: oklch(0.55 0.22 25);
+  --chart-5: oklch(0.65 0.18 320);
+  --sidebar: oklch(0.12 0 0);
+  --sidebar-foreground: oklch(0.75 0.02 240);
+  --sidebar-primary: oklch(0.45 0.25 285);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.75 0.15 180);
+  --sidebar-accent-foreground: oklch(0.12 0 0);
+  --sidebar-border: oklch(0.24 0 0);
+  --sidebar-ring: oklch(0.45 0.25 285);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+/* Custom cyberpunk animations and effects */
+@keyframes neon-glow {
+  0%, 100% { 
+    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+  }
+  50% { 
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.neon-glow {
+  animation: neon-glow 2s ease-in-out infinite alternate;
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, 
+    oklch(0.12 0 0) 0%, 
+    oklch(0.16 0 0) 50%, 
+    oklch(0.12 0 0) 100%);
+}
+
+.cyberpunk-border {
+  border: 1px solid;
+  border-image: linear-gradient(45deg, 
+    oklch(0.45 0.25 285), 
+    oklch(0.75 0.15 180), 
+    oklch(0.45 0.25 285)) 1;
+}
