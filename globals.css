@@ -502,7 +502,7 @@ body {
 
 .showcase-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 35px;
   position: relative;
   z-index: 1;
@@ -729,20 +729,7 @@ body {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .container {
-    padding: 0 30px;
-  }
-
-  .nav-container {
-    padding: 0 30px;
-  }
-
-  .about-content {
-    grid-template-columns: 1fr;
-    gap: 50px;
-    text-align: center;
-  }
-
+  .about-content,
   .contact-content {
     grid-template-columns: 1fr;
     gap: 50px;
@@ -756,11 +743,6 @@ body {
 
   .showcase-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-
-  .hero {
-    min-height: 650px;
   }
 }
 
@@ -769,12 +751,7 @@ body {
     display: flex;
   }
 
-  .container {
-    padding: 0 20px;
-  }
-
   .nav-container {
-    padding: 0 20px;
     height: 70px;
   }
 
@@ -819,12 +796,7 @@ body {
   }
 
   .hero {
-    height: 100vh;
     min-height: 600px;
-  }
-
-  .hero-content {
-    padding: 0 20px;
   }
 
   .hero-buttons {
@@ -835,18 +807,10 @@ body {
 
   .btn {
     width: 280px;
-    padding: 16px 30px;
-    font-size: 1.1rem;
   }
 
-  .about {
-    padding: 80px 0;
-  }
-
-  .showcase {
-    padding: 80px 0;
-  }
-
+  .about,
+  .showcase,
   .contact {
     padding: 80px 0;
   }
@@ -857,56 +821,27 @@ body {
 
   .footer-content {
     grid-template-columns: 1fr;
-    gap: 40px;
     text-align: center;
   }
 
   .showcase-grid {
     grid-template-columns: 1fr;
-    gap: 25px;
     max-width: 450px;
     margin: 0 auto;
-  }
-
-  .showcase-item {
-    border-radius: 20px;
-  }
-
-  .showcase-image {
-    height: 260px;
   }
 
   .showcase-overlay {
     transform: translateY(0);
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
-    padding: 30px 20px 20px;
   }
 
   .social-links {
     justify-content: center;
-    gap: 15px;
-  }
-
-  .social-link {
-    min-width: 140px;
-    text-align: center;
-    padding: 12px 20px;
-  }
-
-  .separator {
-    padding: 40px 0;
-  }
-
-  .geometric-accent {
-    max-width: 200px;
   }
 }
 
 @media (max-width: 480px) {
-  .container {
-    padding: 0 15px;
-  }
-
+  .container,
   .nav-container {
     padding: 0 15px;
   }
@@ -917,21 +852,13 @@ body {
     font-size: 1rem;
   }
 
-  .hero-description {
-    font-size: 1rem;
-  }
-
-  .showcase-grid {
-    max-width: 100%;
-    padding: 0 10px;
+  .nav-link {
+    width: 220px;
+    font-size: 1.2rem;
   }
 
   .showcase-image {
     height: 240px;
-  }
-
-  .about-description p {
-    font-size: 1rem;
   }
 
   .social-link {
@@ -939,37 +866,19 @@ body {
     padding: 10px 15px;
     font-size: 0.9rem;
   }
-
-  .nav-link {
-    width: 220px;
-    font-size: 1.2rem;
-  }
-
-  .title-main {
-    font-size: clamp(2.5rem, 8vw, 4rem);
-  }
-
-  .section-title {
-    font-size: clamp(2rem, 6vw, 3rem);
-  }
 }
 
-@media (max-width: 360px) {
-  .btn {
-    width: 240px;
-    padding: 12px 20px;
-    font-size: 0.95rem;
+@media (hover: none) and (pointer: coarse) {
+  .showcase-item:active {
+    transform: translateY(-10px);
   }
 
-  .social-link {
-    min-width: 110px;
-    padding: 8px 12px;
-    font-size: 0.85rem;
+  .showcase-overlay {
+    transform: translateY(0);
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
   }
 
-  .nav-link {
-    width: 200px;
-    font-size: 1.1rem;
-    padding: 12px 30px;
+  .btn:active {
+    transform: translateY(-2px);
   }
 }
